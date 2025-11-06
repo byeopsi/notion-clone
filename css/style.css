@@ -1,0 +1,165 @@
+*, html {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  font-family: sans-serif;
+  color: rgb(78, 78, 78);
+}
+
+#notion-app {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: row;
+}
+#notion-app .material-symbols-outlined {
+  font-size: 20px;
+}
+#notion-app #side-bar {
+  width: 240px;
+  min-width: 240px;
+  background-color: rgb(248, 247, 245);
+}
+#notion-app #side-bar #main-ul {
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+#notion-app #side-bar #main-ul li {
+  border-radius: 7px;
+  list-style: none;
+  width: 100%;
+}
+#notion-app #side-bar #main-ul .section-title {
+  font-size: 13px;
+  color: rgb(145, 145, 145);
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+#notion-app #side-bar #main-ul .section-title:hover {
+  background-color: rgb(240, 240, 238);
+}
+#notion-app #side-bar #main-ul .main-item {
+  margin-bottom: 10px;
+}
+#notion-app #side-bar #main-ul .main-item:last-child span {
+  color: rgb(145, 145, 145);
+}
+#notion-app #side-bar #main-ul .main-item #title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 7px;
+  padding: 5px;
+  cursor: pointer;
+}
+#notion-app #side-bar #main-ul .main-item #title:hover {
+  background-color: rgb(240, 240, 238);
+}
+#notion-app #side-bar #main-ul .main-item #title div {
+  display: flex;
+  align-items: center;
+}
+#notion-app #side-bar #main-ul .main-item #title div:first-child {
+  gap: 8px;
+}
+#notion-app #side-bar #main-ul .main-item #title div img {
+  width: 25px;
+}
+#notion-app #side-bar #main-ul .sub-ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+}
+#notion-app #side-bar #main-ul .sub-ul .material-symbols-outlined {
+  padding-right: 10px;
+  color: rgb(145, 145, 145);
+}
+#notion-app #side-bar #main-ul .sub-ul .sub-item {
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  cursor: pointer;
+}
+#notion-app #side-bar #main-ul .sub-ul .sub-item:hover {
+  background-color: rgb(240, 240, 238);
+}
+#notion-app #side-bar #main-ul .sub-ul .add-post span {
+  color: rgb(145, 145, 145);
+}
+#notion-app #content-container {
+  flex-grow: 1;
+  flex-shrink: 1;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+}
+#notion-app #content-container #info-bar, #notion-app #content-container #content {
+  padding: 25px;
+}
+#notion-app #content-container #info-bar {
+  height: 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#notion-app #content-container #info-bar #left-info {
+  display: flex;
+  gap: 5px;
+}
+#notion-app #content-container #info-bar #left-info span {
+  font-size: 13px;
+}
+#notion-app #content-container #info-bar #left-info #post-section-title {
+  border-radius: 3px;
+  padding: 2px 7px;
+  cursor: pointer;
+}
+#notion-app #content-container #info-bar #left-info #post-section-title:hover {
+  background-color: rgb(240, 240, 238);
+}
+#notion-app #content-container #info-bar #left-info #post-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  border-radius: 3px;
+  padding: 2px 7px;
+  cursor: pointer;
+}
+#notion-app #content-container #info-bar #left-info #post-title:hover {
+  background-color: rgb(240, 240, 238);
+}
+#notion-app #content-container #info-bar #left-info #post-title span {
+  color: rgb(153, 153, 153);
+}
+#notion-app #content-container #info-bar #left-info #post-title .material-symbols-outlined {
+  font-size: 15px;
+}
+#notion-app #content-container #info-bar #right-info {
+  display: flex;
+  gap: 13px;
+}
+#notion-app #content-container #info-bar #right-info .material-symbols-outline {
+  font-size: 15px;
+}
+#notion-app #content-container #info-bar #right-info span {
+  border-radius: 3px;
+  padding: 2px 7px;
+  cursor: pointer;
+}
+#notion-app #content-container #info-bar #right-info span:first-child {
+  color: rgb(153, 153, 153);
+}
+#notion-app #content-container #info-bar #right-info span:not(:first-child):hover {
+  background-color: rgb(240, 240, 238);
+}
+#notion-app #content-container #content {
+  flex-grow: 1;
+}

@@ -1,0 +1,207 @@
+$color: (
+  hoverable: rgb(240, 240, 238),
+);
+
+*, html {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  font-family: sans-serif;
+  color: rgb(78, 78, 78);
+}
+
+#notion-app {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: row;
+
+  .material-symbols-outlined {
+    font-size: 20px;
+  }
+  
+  #side-bar {
+    width: 240px;
+    min-width: 240px;
+    background-color: rgb(248, 247, 245);
+
+    #main-ul {
+      padding: 5px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      
+      & li {
+        border-radius:7px;
+        list-style: none;
+        width: 100%;
+      }
+      
+      .section-title {
+        font-size: 13px;
+        color: rgb(145, 145, 145);
+        border-radius: 5px;
+        padding: 5px;
+        cursor: pointer;
+        
+        &:hover {
+          background-color: map-get($color, hoverable);
+        }
+      }
+
+      .main-item {
+        margin-bottom: 10px;
+
+        &:last-child {
+          span {
+            color: rgb(145, 145, 145);
+          }
+        }
+
+        #title {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          border-radius:7px;
+          padding: 5px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: map-get($color, hoverable);
+          }
+
+          div{
+            display: flex;
+            align-items: center;
+            
+            &:first-child {
+              gap: 8px;
+            }
+
+            img {
+              width: 25px;
+            }
+          }
+        }
+      }
+
+      .sub-ul {
+        .material-symbols-outlined {
+          padding-right: 10px;
+          color: rgb(145, 145, 145);
+        }
+          
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3px;
+
+        .sub-item {
+          display: flex;
+          align-items: center;
+          padding: 3px;
+          cursor: pointer;
+          
+          &:hover {
+            background-color: map-get($color, hoverable);
+          }
+        }
+
+        .add-post {
+          span {
+            color: rgb(145, 145, 145);
+          }
+        }
+
+        }
+    }
+  }
+  
+  #content-container {
+    flex-grow: 1;
+    flex-shrink: 1;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    
+    #info-bar, #content {
+      padding: 25px;
+    }
+
+    #info-bar {
+      height: 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      #left-info {
+        display: flex;
+        gap: 5px;
+        span {
+          font-size: 13px;
+        }
+
+        #post-section-title {
+          border-radius: 3px;
+          padding: 2px 7px;
+          cursor: pointer;
+          &:hover {
+            background-color: map-get($color, hoverable);
+          }
+        }
+
+        #post-title{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 3px;
+          border-radius: 3px;
+          padding: 2px 7px;
+          cursor: pointer;
+          &:hover {
+            background-color: map-get($color, hoverable);
+          }
+
+          span {
+            color: rgb(153, 153, 153);
+          }
+
+          .material-symbols-outlined {
+            font-size: 15px;
+          }
+        }
+      }
+      
+      #right-info {
+        display: flex;  
+        gap: 13px;
+        .material-symbols-outline {
+          font-size: 15px;
+        }
+        span {
+          border-radius: 3px;
+          padding: 2px 7px;
+          cursor: pointer;
+
+          &:first-child {
+            color: rgb(153, 153, 153);
+          }
+
+          &:not(:first-child){
+          &:hover {
+            background-color: map-get($color, hoverable);
+          }
+          }
+        }
+      }
+    }
+    
+    #content {
+      flex-grow: 1;
+    }
+
+  }
+}
